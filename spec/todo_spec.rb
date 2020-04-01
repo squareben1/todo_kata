@@ -23,5 +23,11 @@ describe Todo do
       subject.add("Hello")
       expect(subject.complete(0)).to eq []
     end
+
+    it 'deletes second item in array' do
+      subject.add("Hello")
+      subject.add("World")
+      expect(subject.complete(1)).to eq ["Hello"]
+    end
   end
 end

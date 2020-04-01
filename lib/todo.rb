@@ -14,6 +14,6 @@ class Todo
   end
 
   def complete(index)
-    []
+    @todos.shift(index)
   end
 end

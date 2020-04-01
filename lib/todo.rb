@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Todo
+  attr_accessor :todos
   def initialize
     @todos = []
   end

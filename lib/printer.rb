@@ -5,6 +5,12 @@ class Printer
   end
 
   def print_todos(arr)
-    "You don't have any todos!"
+    if arr == []
+      "You don't have any todos!"
+    else 
+      arr.each_with_index do |todo, index|
+        return "#{index + 1}. #{todo}"
+      end
+    end 
   end
 end

@@ -12,5 +12,10 @@ describe Printer do
       todos = []
       expect(subject.print_todos(todos)).to eq "You don't have any todos!"
     end
+
+    it 'prints numbered list of 1 todo' do
+      todos = ["Hello"]
+      expect(subject.print_todos(todos)).to eq '1. Hello'
+    end
   end
 end

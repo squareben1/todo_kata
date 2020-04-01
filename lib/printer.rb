@@ -13,4 +13,8 @@ class Printer
       end
     end 
   end
+
+  def print_options
+    "What would you like to do? \nType 'add', followed by a sentence, to add a todo. \nType 'done', followed by the todo ID, to complete a todo."
+  end
 end

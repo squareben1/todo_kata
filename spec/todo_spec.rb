@@ -17,4 +17,11 @@ describe Todo do
       expect(subject.add("todo1")).to eq ["Hello", "todo1"]
     end
   end
+
+  describe 'complete' do
+    it 'deletes todo from array when given corresponding number' do
+      subject.add("Hello")
+      expect(subject.complete(0)).to eq []
+    end
+  end
 end

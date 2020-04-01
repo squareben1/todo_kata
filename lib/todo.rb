@@ -12,4 +12,8 @@ class Todo
   def add(string)
     @todos.push(string)
   end
+
+  def complete(index)
+    []
+  end
 end

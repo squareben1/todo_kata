@@ -7,11 +7,12 @@ class Todo
   end
 
   def add(string)
+    puts "Added todo #{string}\n"
     @todos.push(string)
   end
 
   def complete(index)
-    puts "Completed #{@todos[index]}"
+    puts "Completed #{@todos[index]}\n"
     @todos.shift(index)
   end
 end

@@ -8,14 +8,16 @@ describe Todo do
       expect(subject.add('Hello')).to eq ['Hello']
     end
 
-    it 'adds second todo item' do
-      subject.add('Hello')
+    it 'adds second todo item and confirms' do
+      expect do
+        (subject.add('Hello'))
+      end.to output("Added todo Hello\n").to_stdout
       expect(subject.add('todo1')).to eq ['Hello', 'todo1']
     end
   end
 
   describe 'complete' do
-    it 'deletes todo from array when given corresponding number' do
+    it 'deletes todo from array when given corresponding number and confirms' do
       subject.add('Hello')
       expect do
         (subject.complete(0))

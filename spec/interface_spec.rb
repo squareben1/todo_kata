@@ -3,7 +3,7 @@ require 'interface'
 describe Interface do
   describe '#run_interface' do
     xit 'calls printer print intro' do
-      printer_class_double = class_double('Printer', { print_intro: 'Welcome to the Todo app! Your Todos: '})
+      printer_class_double = class_double('Printer', { print_todos: 'Welcome to the Todo app! Your Todos: '})
       interface = Interface.new(printer_class_double)
       expect(interface.run_interface).to_include 'Welcome to the Todo app! Your Todos: '
     end

@@ -10,13 +10,16 @@ describe Todo do
 
     it 'adds second todo item' do
       subject.add('Hello')
-      expect(subject.add('todo1')).to eq %w[Hello todo1]
+      expect(subject.add('todo1')).to eq ['Hello', 'todo1']
     end
   end
 
   describe 'complete' do
     it 'deletes todo from array when given corresponding number' do
       subject.add('Hello')
+      expect do
+        (subject.complete(0))
+      end.to output("Completed Hello\n").to_stdout
       expect(subject.complete(0)).to eq []
     end
 

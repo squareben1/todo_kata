@@ -14,7 +14,7 @@ class Printer
         string += "#{index + 1}. #{todo}\n"
       end
     end
-     string += "What would you like to do? \nType 'add', followed by a sentence, to add a todo. \nType 'done', followed by the todo ID, to complete a todo."
+    string += "What would you like to do? \nType 'add', followed by a sentence, to add a todo. \nType 'done', followed by the todo ID, to complete a todo."
   end
 
   def self.print_options

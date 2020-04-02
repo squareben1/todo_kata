@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'printer'
 require_relative 'todo'
 
@@ -20,7 +22,7 @@ class Interface
   end
 
   def run_interface
-    loop do 
+    loop do
       puts @printer.print_todos(@todo.todos)
       process(STDIN.gets.strip)
     end

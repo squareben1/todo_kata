@@ -11,7 +11,7 @@ xdescribe Interface do
       interface = Interface.new(todo, Printer)
       expect(interface.run_interface).to include "Welcome to the Todo app! Your Todos: \nYou don't have any todos!\n"
 
-      displayer.stub(:gets).and_return("add Hello")
+      displayer.stub(:gets).and_return('add Hello')
     end
   end
 end

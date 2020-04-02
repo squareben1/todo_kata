@@ -12,7 +12,7 @@ class Todo
   end
 
   def complete(index)
-    puts "Completed #{@todos[index]}\n"
+    puts "Completed #{@todos[index - 1]}\n"
     @todos.shift(index)
   end
 end
